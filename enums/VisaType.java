@@ -1,0 +1,5 @@
+package enums;
+
+public enum VisaType{
+    TOURISTS_VISA,BUSINESS_VISA,MEDICAL_VISA,STUDENT_VISA,TRANSIT_VISA,UNKNOWN
+}

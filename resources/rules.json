@@ -1,0 +1,36 @@
+[
+  {
+    "destinationCountry": "INDIA",
+    "passportCountry": "USA",
+    "travelPurpose": "TOURISM",
+    "maxStayDays": 90,
+    "visaRequired": true,
+    "visaType": "TOURISTS_VISA",
+    "requiredDocuments": ["PASSPORT", "PHOTO"],
+    "estimatedProcessingDays": 5,
+    "warnings": ["Apply at least 1 week in advance"]
+  },
+  {
+    "destinationCountry": "INDIA",
+    "passportCountry": "USA",
+    "travelPurpose": "TOURISM",
+    "maxStayDays": 90,
+    "visaRequired": false,
+    "visaType": "TOURISTS_VISA",
+    "requiredDocuments": ["PASSPORT", "PHOTO"],
+    "estimatedProcessingDays": 5,
+    "warnings": ["Apply at least 1 week in advance"]
+  },
+  {
+    "destinationCountry": "AUSTRALIA",
+    "passportCountry": "INDIA",
+    "travelPurpose": "STUDY",
+    "maxStayDays": 180,
+    "visaRequired": true,
+    "visaType": "STUDENT_VISA",
+    "requiredDocuments": ["PASSPORT", "PHOTO", "ADMISSION_LETTER"],
+    "estimatedProcessingDays": 15,
+    "warnings": []
+  }
+]
+
