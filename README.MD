@@ -1,55 +1,42 @@
-🚀 Key Features
-1)JSON-Driven Logic: Uses Google Gson to parse travel regulations dynamically.
+# 🛂 Visa Requirement Evaluator
 
-2)Automated Evaluation: Instantly determines if a visa is required and identifies the specific visa type.
+A robust Java-based decision engine designed to evaluate international travel eligibility. This system dynamically parses visa regulations from a JSON database and provides a detailed decision based on the traveler's destination, nationality, and purpose of stay.
 
-3)Document Checklist: Provides travelers with a list of required documents (e.g., Passport, Photos).
+## 🚀 Key Features
 
-4)afety Warnings: Displays specific travel alerts and processing time estimates
+* **JSON-Driven Logic**: Utilizes Google Gson to deserialize and parse travel regulations dynamically.
+* **Automated Evaluation**: Instantly determines if a visa is required and identifies the specific visa type.
+* **Document Checklist**: Provides travelers with a comprehensive list of required documentation.
+* **Safety Warnings**: Displays specific travel alerts, processing time estimates, and stay duration limits.
 
-📂 Project Structure
-Based on the current architecture:
+---
 
-dto/: Data Transfer Objects representing VisaRule and VisaDecision.
+## 📂 Project Structure
 
-enums/: Type-safe constants for Country, VisaType, and TravelPurpose.
+The project is organized into modular packages to ensure separation of concerns:
 
-evaluator/: The core engine (VisaRuleEvaluator) that matches user input against rules.
+| Directory | Description |
+| :--- | :--- |
+| **`dto/`** | Data Transfer Objects for `VisaRule` and `VisaDecision`. |
+| **`enums/`** | Type-safe constants for `Country`, `VisaType`, and `TravelPurpose`. |
+| **`evaluator/`** | The core engine (`VisaRuleEvaluator`) that matches user input against rules. |
+| **`loader/`** | Logic for reading and parsing JSON configuration files. |
+| **`repository/`** | In-memory storage for the collection of loaded visa rules. |
+| **`resources/`** | Contains the `rules.json` data file. |
+| **`lib/`** | External libraries, specifically `gson-2.10.1.jar`. |
 
-loader/: Logic for reading and parsing the JSON data files.
+---
 
-repository/: In-memory storage for the loaded visa rules.
+## 🛠 Installation & Execution
 
-resources/: Contains the rules.json data file.
+### Prerequisites
+* **Java Development Kit (JDK)** 17+ installed.
+* **Gson library** (`gson-2.10.1.jar`) placed in the `lib` folder.
 
-lib/: External libraries (contains gson-2.10.1.jar).
-
-Installation & Execution
-Prerequisites
-Java Development Kit (JDK) installed.
-
-Gson library (gson-2.10.1.jar) placed in the lib folder.
-
-1. Compilation
-Use the following command to compile all packages and the main entry point:
+### 1. Compilation
+Run this command from the project root to compile all packages:
+```bash
 javac -cp ".:./lib/gson-2.10.1.jar" -d . dto/*.java enums/*.java repository/*.java loader/*.java evaluator/*.java Main.java
 
-2. Running the Application
-Run the compiled bytecode while including the resources and library in the classpath:
+###2. Running the Application
 java -cp ".:./lib/gson-2.10.1.jar:./resources" Main
-
-Example Usage & Output
-When you run the system and provide travel details, it outputs a clear decision:
-✅ === Visa Decision ===
-Visa Required:      YES
-Visa Type:          TOURIST_VISA
-Documents Required: [PASSPORT, PHOTO]
-Processing Days:    5
-Warnings:           [Apply at least 1 week in advance]
-
-Technical Implementation Details
-Object-Relational Mapping: Maps JSON keys directly to Java fields using the Repository pattern.
-
-Validation: Built-in loops to ensure user input matches the expected Enum values.
-
-Scalability: New countries or rules can be added simply by updating the rules.json file without changing the Java source code.
