@@ -1,13 +1,13 @@
-Key Features
-JSON-Driven Logic: Uses Google Gson to parse travel regulations dynamically.
+🚀 Key Features
+1)JSON-Driven Logic: Uses Google Gson to parse travel regulations dynamically.
 
-Automated Evaluation: Instantly determines if a visa is required and identifies the specific visa type.
+2)Automated Evaluation: Instantly determines if a visa is required and identifies the specific visa type.
 
-Document Checklist: Provides travelers with a list of required documents (e.g., Passport, Photos).
+3)Document Checklist: Provides travelers with a list of required documents (e.g., Passport, Photos).
 
-Safety Warnings: Displays specific travel alerts and processing time estimates
+4)afety Warnings: Displays specific travel alerts and processing time estimates
 
-Project Structure
+📂 Project Structure
 Based on the current architecture:
 
 dto/: Data Transfer Objects representing VisaRule and VisaDecision.
