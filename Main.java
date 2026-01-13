@@ -19,7 +19,7 @@ public class Main {
 
         System.out.println("Initializing Visa System...");
         
-       
+        
         RuleLoader ruleLoader = new RuleLoader();
         List rules = ruleLoader.loadRules(); 
         
@@ -27,14 +27,14 @@ public class Main {
             System.err.println("Error: No rules loaded! Check your JSON file path.");
             return;
         }
-
-      
-        RuleRepository ruleRepository = new RuleRepository(rules);
-
         
+        
+        RuleRepository ruleRepository = new RuleRepository(rules);
+         
+         
         VisaRuleEvaluator evaluator = new VisaRuleEvaluator(ruleRepository);
-
-       
+         
+         
         Country country = (Country) getEnumInput(scanner, Country.class, "Destination Country");
         PassportCountry passportCountry = (PassportCountry) getEnumInput(scanner, PassportCountry.class, "Passport Country");
         TravelPurpose travelPurpose = (TravelPurpose) getEnumInput(scanner, TravelPurpose.class, "Travel Purpose");

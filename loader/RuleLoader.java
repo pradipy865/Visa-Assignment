@@ -31,7 +31,7 @@ public class RuleLoader {
         Type ruleListType = new TypeToken<List<VisaRule>>() {}.getType();
 
         List<VisaRule> rules = gson.fromJson(reader, ruleListType);
-
+   
        
         if (rules == null) {
             return Collections.emptyList();

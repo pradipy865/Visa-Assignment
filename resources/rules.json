@@ -25,6 +25,18 @@
     "destinationCountry": "AUSTRALIA",
     "passportCountry": "INDIA",
     "travelPurpose": "STUDY",
+    "maxStayDays": 0,
+    "visaRequired": true,
+    "visaType": "STUDENT_VISA",
+    "requiredDocuments": ["PASSPORT", "PHOTO", "ADMISSION_LETTER"],
+    "estimatedProcessingDays": 15,
+    "warnings": []
+  },
+
+  {
+    "destinationCountry": "SOUTH_AFRICA",
+    "passportCountry": "INDIA",
+    "travelPurpose": "STUDY",
     "maxStayDays": 180,
     "visaRequired": true,
     "visaType": "STUDENT_VISA",
@@ -32,5 +44,6 @@
     "estimatedProcessingDays": 15,
     "warnings": []
   }
+
 ]
 
